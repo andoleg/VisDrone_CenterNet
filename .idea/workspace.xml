@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="04ad5256-c386-4d39-85e8-e5b6b0121a0d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/lib/datasets/dataset/coco.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/datasets/dataset/coco.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/datasets/sample/ctdet.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/datasets/sample/ctdet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/models/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/models/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/models/networks/msra_resnet.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/models/networks/msra_resnet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/opts.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/opts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/trains/base_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/trains/base_trainer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/trains/ctdet.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/trains/ctdet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="a1ca8c68-41e7-4565-90ef-20ac2e66bb43" />
+  <component name="ProjectId" id="1hMBdvHG8jLwfTYoQrnjVzTiRED" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/data/coco/annotations" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="terminalCustomCommandExecutionTurnOff" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/coco/annotations" />
+      <recent name="$PROJECT_DIR$/models" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04ad5256-c386-4d39-85e8-e5b6b0121a0d" name="Default Changelist" comment="" />
+      <created>1599811171954</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599811171954</updated>
+      <workItem from="1599811195741" duration="3867000" />
+      <workItem from="1599994927977" duration="577000" />
+      <workItem from="1599996262766" duration="11134000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="397" y="199" key="SettingsEditor" timestamp="1599996519679">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="397" y="199" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1599996519679" />
+  </component>
+</project>
