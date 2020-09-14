@@ -1,5 +1,7 @@
 legacy/*
 .DS_Store
+.idea
+*.ipynb_checkpoints
 debug/*
 *.DS_Store
 *.json

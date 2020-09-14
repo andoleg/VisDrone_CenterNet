@@ -4,6 +4,8 @@ from __future__ import print_function
 
 import os
 
+import _init_paths
+
 import torch
 import torch.utils.data
 from datasets.dataset_factory import get_dataset
@@ -96,5 +98,6 @@ def main(opt):
 
 
 if __name__ == '__main__':
-    opt = opts().parse()
+    opt = opts().parse(['ctdet', '--dataset', 'coco', '--gpus', '-1', '--head_conv', '64', '--input_res', '512', '--lr', '2.5e4',
+                        '--num_workers', '0'])
     main(opt)
