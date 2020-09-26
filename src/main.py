@@ -98,6 +98,6 @@ def main(opt):
 
 
 if __name__ == '__main__':
-    opt = opts().parse(['ctdet', '--dataset', 'coco', '--gpus', '-1', '--head_conv', '64', '--input_res', '512', '--lr', '2.5e4',
+    opt = opts().parse(['ctdet', '--dataset', 'coco', '--gpus', '-1', '--head_conv', '64', '--input_res', '128', '--lr', '2.5e-4',
                         '--num_workers', '0'])
     main(opt)

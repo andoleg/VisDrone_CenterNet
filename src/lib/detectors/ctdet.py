@@ -35,7 +35,8 @@ class CtdetDetector(BaseDetector):
         hm = (hm[0:1] + flip_tensor(hm[1:2])) / 2
         wh = (wh[0:1] + flip_tensor(wh[1:2])) / 2
         reg = reg[0:1] if reg is not None else None
-      torch.cuda.synchronize()
+      if self.opt.device == 'cuda':
+        torch.cuda.synchronize()
       forward_time = time.time()
       dets = ctdet_decode(hm, wh, reg=reg, cat_spec_wh=self.opt.cat_spec_wh, K=self.opt.K)
       
@@ -93,4 +94,4 @@ class CtdetDetector(BaseDetector):
       for bbox in results[j]:
         if bbox[4] > self.opt.vis_thresh:
           debugger.add_coco_bbox(bbox[:4], j - 1, bbox[4], img_id='ctdet')
-    debugger.show_all_imgs(pause=self.pause)
+    debugger.show_all_imgs(pause=self.pause, ip)

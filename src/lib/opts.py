@@ -227,7 +227,7 @@ class opts(object):
 
     def parse(self, args=''):
         if args == '':
-            opt = self.parser.parse_args('')
+            opt = self.parser.parse_args()
         else:
             opt = self.parser.parse_args(args)
 
@@ -336,7 +336,7 @@ class opts(object):
 
     def init(self, args=''):
         default_dataset_info = {
-            'ctdet': {'default_resolution': [512, 512], 'num_classes': 80,
+            'ctdet': {'default_resolution': [512, 512], 'num_classes': 10,
                       'mean': [0.408, 0.447, 0.470], 'std': [0.289, 0.274, 0.278],
                       'dataset': 'coco'},
             'exdet': {'default_resolution': [512, 512], 'num_classes': 80,

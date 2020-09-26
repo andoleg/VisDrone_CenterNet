@@ -12,7 +12,6 @@ import time
 from progress.bar import Bar
 import torch
 
-from external.nms import soft_nms
 from opts import opts
 from logger import Logger
 from utils.utils import AverageMeter
@@ -119,7 +118,7 @@ def test(opt):
   dataset.run_eval(results, opt.save_dir)
 
 if __name__ == '__main__':
-  opt = opts().parse()
+  opt = opts().parse(['ctdet', '--load_model', '/content/drive/My Drive/public/model_best.pth', '--head_conv', '64', '--not_prefetch_test'])
   if opt.not_prefetch_test:
     test(opt)
   else:

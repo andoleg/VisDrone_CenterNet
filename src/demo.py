@@ -52,5 +52,5 @@ def demo(opt):
         time_str = time_str + '{} {:.3f}s |'.format(stat, ret[stat])
       print(time_str)
 if __name__ == '__main__':
-  opt = opts().init()
+  opt = opts().init(['ctdet', '--load_model', '/content/drive/My Drive/public/model_best.pth', '--head_conv', '64'])
   demo(opt)
