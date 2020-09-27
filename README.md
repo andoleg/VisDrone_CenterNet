@@ -28,6 +28,7 @@ Without any PC with avalable GPU we had to train all models on Google Colab. It 
  - Inability to train model with pre-trained weights, as we could not compile Deformable Convolution layers
  - Inability to train without connection loss, it toook much more time than it was suppose to take
  - Load data every time to colab, takes a huge amount of time every time Colab decides to sever connection
+
 All of those little problems made the workflow much harder, and it took much more amount of time to get some results
 
 ## Results
