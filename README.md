@@ -58,7 +58,8 @@ Comparing **mAP** of our implementation to that of the paper[3]:
 
 ## References
 [1] Pengfei Zhu, Longyin Wen, Dawei Du, Xiao Bian, Qinghua Hu, Haibin Ling. Vision Meets Drones: Past, Present and Future. arXiv preprint arXiv:2001.06303 (2020) \
-[2] Zhou, Xingyi and Wang, Dequan and Kr&auml;henb&uuml;hl, Philipp. Objects as points. arXiv preprint arXiv:1904.07850 (2019), (github link)[https://github.com/xingyizhou/CenterNet]\
+[2] Zhou, Xingyi and Wang, Dequan and Kr&auml;henb&uuml;hl, Philipp. Objects as points. arXiv preprint arXiv:1904.07850 (2019), 
+[github link](https://github.com/xingyizhou/CenterNet)\
 [3] Pailla, Kollerathu, Chennamsetty. Object detection on aerial imagery using CenterNet. arXiv:1908.08244v1 (2019) (https://arxiv.org/pdf/1908.08244.pdf)
 
 
