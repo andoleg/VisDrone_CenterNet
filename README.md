@@ -49,7 +49,7 @@ After training model with DCN layers on images resized to **512x512** for **140 
 ![](images/tg_image_1413263110.jpeg)
 ![](images/tg_image_2947738168.jpeg)
 
-Comparing **mAP** of our implementation to that of the paper[3]:
+Comparing **mAP** of our implementation to that of the paper on validation set (n=548 images)[3]:
 |Implementation|mAP (%)|
 |--------------|:-----:|
 |Paper [3]     | 13.36 |
