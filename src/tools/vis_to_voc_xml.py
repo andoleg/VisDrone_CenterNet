@@ -61,20 +61,24 @@ for annotation in tqdm(annotation_list):
     img_path = os.path.join(os.getcwd(), input_img_folder, img_file)
     output_img_path = os.path.join(os.getcwd(), output_img_folder, img_file)
     img = cv2.imread(img_path)
-    annotation_string_init = '''
-<annotation>
-	<folder>annotations</folder>
-	<filename>{}</filename>
-	<path>{}</path>
-	<source>
-		<database>Unknown</database>
-	</source>
-	<size>
-		<width>{}</width>
-		<height>{}</height>
-		<depth>{}</depth>
-	</size>
-	<segmented>0</segmented>'''.format(img_file, img_path, img.shape[0], img.shape[1], img.shape[2])
+    try:
+        annotation_string_init = '''
+        <annotation>
+            <folder>annotations</folder>
+            <filename>{}</filename>
+            <path>{}</path>
+            <source>
+                <database>Unknown</database>
+            </source>
+            <size>
+                <width>{}</width>
+                <height>{}</height>
+                <depth>{}</depth>
+            </size>
+        <segmented>0</segmented>'''.format(img_file, img_path, img.shape[0], img.shape[1], img.shape[2])
+    except Exception as e:
+        print(img_path)
+        continue
 
     file = open(annotation_path, 'r')
     lines = file.readlines()
@@ -84,7 +88,10 @@ for annotation in tqdm(annotation_list):
         new_coords_max = (int(new_line[0]) + int(new_line[2]), int(new_line[1]) + int(new_line[3]))
         bbox = (
         int(new_line[0]), int(new_line[1]), int(new_line[0]) + int(new_line[2]), int(new_line[1]) + int(new_line[3]))
-        label = label_dict.get(new_line[5])
+        if new_line[5] != '0' and new_line[5] != '11':
+            label = label_dict.get(new_line[5])
+        else:
+            continue
         req_str = object_string(label, bbox)
         annotation_string_init = annotation_string_init + req_str
     # cv2.rectangle(img, new_coords_min, new_coords_max, color, thickness)
@@ -94,4 +101,4 @@ for annotation in tqdm(annotation_list):
     f.write(annotation_string_final)
     f.close()
     count += 1
-    # print('[INFO] Completed {} image(s) and annotation(s) pair'.format(count))
+print('[INFO] Completed {} image(s) and annotation(s) pair'.format(count))

@@ -7,7 +7,7 @@ import os, sys
 
 
 class PascalVOC2coco(object):
-    def __init__(self, xml=[], save_json_path='./new.json'):
+    def __init__(self, xml=[], save_json_path='./new_annos.json'):
         '''
         :param xml: 所有Pascal VOC的xml文件路径组成的列表
         :param save_json_path: json保存位置
@@ -25,6 +25,9 @@ class PascalVOC2coco(object):
         self.ob = []
 
         self.save_json()
+
+        print(len(self.categories))
+        print(len(self.label))
 
     def data_transfer(self):
         for num, json_file in enumerate(self.xml):
@@ -55,11 +58,11 @@ class PascalVOC2coco(object):
                     #     folder =p.split('>')[1].split('<')[0]
                     f_name = 1
                     if 'filename' in p:
-                        self.filen_ame = p.split('>')[1].split('<')[0]
+                        self.file_name = p.split('>')[1].split('<')[0]
                         # print(self.filen_ame)
                         f_name = 0
 
-                        self.path = os.path.join(path, 'SegmentationObject', self.filen_ame.split('.')[0] + '.png')
+                        self.path = os.path.join(path, 'SegmentationObject', self.file_name.split('.')[0] + '.png')
                         # if self.path not in obj_path:
                         #    break
 
@@ -135,7 +138,7 @@ class PascalVOC2coco(object):
         image['height'] = self.height
         image['width'] = self.width
         image['id'] = self.num + 1
-        image['file_name'] = '/Users/olega/PycharmProjects/CenterNet/data/coco/train/' + self.filen_ame
+        image['file_name'] = self.file_name
         return image
 
     def categorie(self):
@@ -155,6 +158,7 @@ class PascalVOC2coco(object):
         annotation['bbox'] = self.bbox
         annotation['category_id'] = self.getcatid(self.supercategory)
         annotation['id'] = self.annID
+        annotation['area'] = self.bbox[2] * self.bbox[3]
         return annotation
 
     def getcatid(self, label):
@@ -268,6 +272,6 @@ class PascalVOC2coco(object):
 
 # xml_file = glob.glob('./VisDrone2019-DET-train/Annotations_XML/0000002_00005_d_0000014.xml')
 # xml_file=['./Annotations/000032.xml']
-dir = '/Users/olega/Downloads/VisDrone2019-DET-train/annotations_new'
+dir = '/Users/olega/Downloads/VisDrone2019-DET-train/annotations_ubuntu'
 xmls = [os.path.join(dir, x) for x in os.listdir(dir)]
 PascalVOC2coco(xml=xmls)
