@@ -49,6 +49,12 @@ After training model with DCN layers on images resized to **512x512** for **140 
 ![](images/tg_image_1413263110.jpeg)
 ![](images/tg_image_2947738168.jpeg)
 
+Comparing **mAP** of our implementation to that of the paper[3]:
+|Implementation|mAP (%)|
+|--------------|:-----:|
+|Paper [3]     | 13.36 |
+|Ours          | 5.4   |
+
 
 ## References
 [1] Pengfei Zhu, Longyin Wen, Dawei Du, Xiao Bian, Qinghua Hu, Haibin Ling. Vision Meets Drones: Past, Present and Future. arXiv preprint arXiv:2001.06303 (2020) \
@@ -56,7 +62,7 @@ After training model with DCN layers on images resized to **512x512** for **140 
 [3] Pailla, Kollerathu, Chennamsetty. Object detection on aerial imagery using CenterNet. arXiv:1908.08244v1 (2019) (https://arxiv.org/pdf/1908.08244.pdf)
 
 
-
+-----
 # Objects as Points
 Object detection, 3D detection, and pose estimation using center point detection:
 ![](readme/fig2.png)
