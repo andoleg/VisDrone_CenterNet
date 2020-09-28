@@ -6,7 +6,7 @@
 ## Description
 The topic: **Object Detection in Aerial Images**\
 The dataset: **VisDrone2020-DET dataset**[1]\
-The method: **CenterNet: Objects as Points**[2]\
+The method: **CenterNet: Objects as Points**[2]
 
 The reason why we decided to utilize *CenterNet* is written in (their highlights)[https://github.com/xingyizhou/CenterNet]:
 - **Simple:** One-sentence method summary: use keypoint detection technic to detect the bounding box center point and regress to all other object properties like bounding box size, 3d information, and pose.
@@ -18,6 +18,13 @@ The reason why we decided to utilize *CenterNet* is written in (their highlights
 - **Strong**: Our best single model achieves *45.1*AP on COCO test-dev.
 
 - **Easy to use:** We provide user friendly testing API and webcam demos.
+
+### Dataset
+1. Download VisDrone-Det dataset from [here](http://aiskyeye.com) (Need sign up to be able to download it)
+2. As the dataset's annotations has a unique format, we need to parse it to COCO annotations format:
+    1. Convert the data from VisDrone format to VOC xml format using `src/tools/vis_to_voc_xml.py`
+    2. Convert VOC xml annotations to `.json` COCO annotation using `src/tools/voc_xml_to_json.py`
+3. All data should be put into `data/coco/annotations/*.json` and `data/coco/train/*.jpg`
 
 ### Objects as points vs Single Shot Multiple-Box Detector
 During the time we were training CenterNet we gave SSD a shot. But we quickly came to realization that SSD300 performs extremely bad for small objects and on VisDrone dataset overall. Therefore, we decided to stick with CenterNet.
@@ -32,12 +39,16 @@ Without any PC with avalable GPU we had to train all models on Google Colab. It 
 All of those little problems made the workflow much harder, and it took much more amount of time to get some results
 
 ## Results
-*TODO*
+After training model with DCN layers on images resized to **512x512** for **140 epochs** with learning_rate = **2.5e-4** we got:
+![](images/tg_image_1413263110.jpeg)
+![](images/tg_image_2947738168.jpeg)
 
 
 ## References
 [1] Pengfei Zhu, Longyin Wen, Dawei Du, Xiao Bian, Qinghua Hu, Haibin Ling. Vision Meets Drones: Past, Present and Future. arXiv preprint arXiv:2001.06303 (2020) \
 [2] Zhou, Xingyi and Wang, Dequan and Kr&auml;henb&uuml;hl, Philipp. Objects as points. arXiv preprint arXiv:1904.07850 (2019), (github link)[https://github.com/xingyizhou/CenterNet]
+
+
 
 # Objects as Points
 Object detection, 3D detection, and pose estimation using center point detection:
