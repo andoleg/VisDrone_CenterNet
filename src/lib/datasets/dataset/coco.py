@@ -25,8 +25,7 @@ class COCO(data.Dataset):
         self.img_dir = os.path.join(self.data_dir, '{}2017'.format(split))
         if split == 'test':
             self.annot_path = os.path.join(
-                self.data_dir, "validation", 'annotations',
-                'vis_val.json'
+                self.data_dir, "validation", 'vis_val.json'
             )
         else:
             if opt.task == 'exdet':

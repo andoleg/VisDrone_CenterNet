@@ -77,6 +77,6 @@ class PascalVOC(data.Dataset):
     # result_json = os.path.join(save_dir, "results.json")
     # detections  = self.convert_eval_format(results)
     # json.dump(detections, open(result_json, "w"))
-    self.save_results(results, save_dir)
+    # self.save_results(results, save_dir)
     os.system('python tools/reval.py ' + \
               '{}/results.json'.format(save_dir))
