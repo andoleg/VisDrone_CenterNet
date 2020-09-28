@@ -8,7 +8,7 @@ The topic: **Object Detection in Aerial Images**\
 The dataset: **VisDrone2020-DET dataset**[1]\
 The method: **CenterNet: Objects as Points**[2]
 
-The reason why we decided to utilize *CenterNet* is written in (their highlights)[https://github.com/xingyizhou/CenterNet]:
+The reason why we decided to utilize *CenterNet* is written in [their highlights](https://github.com/xingyizhou/CenterNet):
 - **Simple:** One-sentence method summary: use keypoint detection technic to detect the bounding box center point and regress to all other object properties like bounding box size, 3d information, and pose.
 
 - **Versatile:** The same framework works for object detection, 3d bounding box estimation, and multi-person pose estimation with minor modification.
