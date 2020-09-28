@@ -19,6 +19,9 @@ The reason why we decided to utilize *CenterNet* is written in (their highlights
 
 - **Easy to use:** We provide user friendly testing API and webcam demos.
 
+### Installation
+Refer to installation [instructions](https://github.com/HungryCookie/VisDrone_CenterNet/blob/master/readme/INSTALL.md) for building DCNv2 layers and NMS (if needed)
+
 ### Dataset
 1. Download VisDrone-Det dataset from [here](http://aiskyeye.com) (Need sign up to be able to download it)
 2. As the dataset's annotations has a unique format, we need to parse it to COCO annotations format:
@@ -26,9 +29,12 @@ The reason why we decided to utilize *CenterNet* is written in (their highlights
     2. Convert VOC xml annotations to `.json` COCO annotation using `src/tools/voc_xml_to_json.py`
 3. All data should be put into `data/coco/annotations/*.json` and `data/coco/train/*.jpg`
 
+Otherwise follow instructions from [here](https://github.com/HungryCookie/VisDrone_CenterNet/blob/master/readme/DATA.md) if you have other dataset.
+
 ### Objects as points vs Single Shot Multiple-Box Detector
-During the time we were training CenterNet we gave SSD a shot. But we quickly came to realization that SSD300 performs extremely bad for small objects and on VisDrone dataset overall. Therefore, we decided to stick with CenterNet.
-Even still, as the VisDrone dataset fairly small the Average Precision is really small.
+During the time we were training CenterNet we gave SSD a shot. But we quickly came to realization that SSD300 performs extremely bad for small objects and on VisDrone dataset overall (it was metioned as well in the article [3]).\
+With using CenterNet we were able to achive much better results on the dataset.
+
 
 ## Strugles
 Without any PC with avalable GPU we had to train all models on Google Colab. It resulted in certain complications:
@@ -47,6 +53,7 @@ After training model with DCN layers on images resized to **512x512** for **140 
 ## References
 [1] Pengfei Zhu, Longyin Wen, Dawei Du, Xiao Bian, Qinghua Hu, Haibin Ling. Vision Meets Drones: Past, Present and Future. arXiv preprint arXiv:2001.06303 (2020) \
 [2] Zhou, Xingyi and Wang, Dequan and Kr&auml;henb&uuml;hl, Philipp. Objects as points. arXiv preprint arXiv:1904.07850 (2019), (github link)[https://github.com/xingyizhou/CenterNet]
+[3] Pailla, Kollerathu, Chennamsetty. Object detection on aerial imagery using CenterNet. arXiv:1908.08244v1 (2019) (https://arxiv.org/pdf/1908.08244.pdf)
 
 
 
